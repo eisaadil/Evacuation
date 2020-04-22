@@ -27,6 +27,9 @@ class Point:
     def __truediv__(self, scalar):
         return Point(self.x / scalar, self.y / scalar)
 
+    def __dist__(self, other):
+        return sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
+
     @property
     def tuple(self):
         return (self.x, self.y)
